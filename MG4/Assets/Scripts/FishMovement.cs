@@ -23,7 +23,7 @@ public class FishMovement : MonoBehaviour
         // Key code reference: https://docs.unity3d.com/6000.0/Documentation/ScriptReference/KeyCode.html 
         //
         // Feature 1 of the rubric should be complete after this.
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             movement.z = -1;
         }
@@ -33,7 +33,14 @@ public class FishMovement : MonoBehaviour
         //  Add one more IF and ELSE/IF statement to move the player UP and DOWN.
         //  If the player hits the Q key, they should move UP.
         //  If the player hits the E key, they should move DOWN.
-        //  
+        if (Input.GetKey(KeyCode.Q))
+        {
+            movement.y = 1;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            movement.y = -1;
+        }
         //  This is going to look very similar to the statements above, but using
         //      different keys to change a different axis of movement.
         //
@@ -41,7 +48,7 @@ public class FishMovement : MonoBehaviour
         //      move up and down? Is negative up or down? Is positive up or down?
         //
         // Feature 2 of the rubric should be complete after this.
-        
+
 
 
         // STEP 2 -------------------------------------------------------------
